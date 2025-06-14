@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Batik Online</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Batik<span>Store</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#produk">Produk</a></li>
+                <li><a href="#tentang">Tentang Kami</a></li>
+                <li>
+                    <a href="#keranjang" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>Batik Store</h2>
+                <p>Keindahan Warisan Budaya Indonesia</p>
+                <a href="#produk" class="btn">Belanja Sekarang</a>
+            </div>
+        </section>
+
+        <section id="produk" class="products">
+            <h2>Produk</h2>
+            <div class="product-container" id="product-container"></div>
+        </section>
+
+        <section id="tentang" class="about">
+            <h2>Tentang Toko</h2>
+            <p>BatikStore adalah toko online yang menyediakan berbagai macam kemeja batik asli Indonesia. Kami berkomitmen untuk melestarikan warisan budaya Indonesia melalui produk-produk berkualitas tinggi.</p>
+        </section>
+    </main>
+
+    <!-- Modal Keranjang -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Keranjang Belanja</h2>
+            <div class="cart-items" id="cart-items">
+                <!-- Item keranjang akan dimuat di sini -->
+            </div>
+            <div class="cart-total">
+                <h3>Total: <span id="cart-total">Rp 0</span></h3>
+                <button id="checkout-btn" class="btn">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Checkout -->
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content checkout-form">
+            <span class="close">&times;</span>
+            <h2>Formulir Checkout</h2>
+            <form id="checkout-form">
+                <div class="form-group">
+                    <label for="name">Nama Lengkap</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">No. Telepon</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Alamat Pengiriman</label>
+                    <textarea id="address" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="payment">Metode Pembayaran</label>
+                    <select id="payment" required>
+                        <option value="">Pilih metode</option>
+                        <option value="transfer">Transfer Bank</option>
+                        <option value="cod">COD (Bayar di Tempat)</option>
+                        <option value="e-wallet">E-Wallet</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Proses Pembayaran</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Terima Kasih -->
+    <div id="thankyou-modal" class="modal">
+        <div class="modal-content thankyou">
+            <span class="close">&times;</span>
+            <div class="thankyou-content">
+                <i class="fas fa-check-circle"></i>
+                <h2>Terima Kasih!</h2>
+                <p>Pesanan Anda telah berhasil diterima. Kami akan segera memproses pesanan Anda.</p>
+                <button id="back-to-shop" class="btn">Kembali Berbelanja</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Toko BatikStore. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
